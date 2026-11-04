@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Receipt line items for Treasury (concept)</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="concept">Concept mockup by Aarush Todimala. Sample data. Not affiliated with Treasury.</div>
+
+  <div class="shell" id="shell">
+    <aside class="side">
+      <div class="word">Treasury</div>
+      <nav>
+        <div class="nav">Home</div>
+        <div class="nav">Budgets</div>
+        <div class="nav on">Transactions</div>
+        <div class="nav">Recurring</div>
+        <div class="nav">Net Worth</div>
+        <div class="nav">Settings</div>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="col">
+        <div class="eyebrow" id="today"></div>
+        <div class="head">
+          <h1>Transactions</h1>
+          <input id="file" class="vh" type="file" accept="image/*" aria-label="Scan receipt">
+          <label class="pill" for="file">Scan receipt</label>
+        </div>
+
+        <section class="insight" id="intro">
+          <div class="insight-label"><span class="spark">✦</span>TREASURY INSIGHT</div>
+          <p>This <em>Whole Foods</em> charge is one line. A receipt photo shows what was inside it.</p>
+          <button class="pill small" id="sample" type="button">Try it with a sample receipt</button>
+        </section>
+
+        <div id="list" class="list"></div>
+      </div>
+    </main>
+
+    <aside class="panel" id="panel" hidden aria-live="polite"></aside>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@7.0.0/dist/tesseract.min.js"></script>
+  <script src="parse.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
